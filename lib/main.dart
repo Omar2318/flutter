@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/app_routes.dart';
+import 'package:flutter_widgets/screens/buttons_screen.dart';
+import 'package:flutter_widgets/screens/cards_screen.dart';
+import 'package:flutter_widgets/screens/colum_rows_screen.dart';
+import 'package:flutter_widgets/screens/home_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,28 +13,15 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final menu = Routes().menu;
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text('Home'),
-          backgroundColor: Colors.indigo,
-          foregroundColor: Colors.white,
-        ),
-        body: ListView.builder(
-          itemCount: menu.length,
-          itemBuilder: (context, index) => ListTile(
-            title: Text(menu[index].title),
-            leading: Icon(Icons.accessibility_outlined),
-            trailing: Icon(Icons.arrow_forward_ios),
-            onTap: () {
-              Navigator.pushNamed(context, menu[index].route);
-            },
-          ),
-        ),
-      ),
       debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomeScreen(),
+        '/buttons': (context) => ButtonsScreen(),
+        '/cards': (context) => CardsScreen(),
+        '/columnsrow': (context) => ColumnRowsScreen(),
+      },
     );
   }
 }

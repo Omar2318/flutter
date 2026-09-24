@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class ButtonsScreen extends StatelessWidget {
-  const ButtonsScreen({super.key});
+class ColumnRowsScreen extends StatelessWidget {
+  const ColumnRowsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Buttons'),
-        backgroundColor: Colors.amber,
+        title: Text('Colum & rows'),
+        backgroundColor: Colors.deepPurple,
         foregroundColor: Colors.white,
       ),
     );

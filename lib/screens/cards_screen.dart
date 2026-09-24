@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class ButtonsScreen extends StatelessWidget {
-  const ButtonsScreen({super.key});
+class CardsScreen extends StatelessWidget {
+  const CardsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Buttons'),
-        backgroundColor: Colors.amber,
+        title: Text('Cards'),
+        backgroundColor: Colors.blueGrey,
         foregroundColor: Colors.white,
       ),
     );
