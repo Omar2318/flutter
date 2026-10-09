@@ -12,8 +12,6 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text('Home'),
-        backgroundColor: Colors.indigo,
-        foregroundColor: Colors.white,
       ),
       body: ListView.builder(
         itemCount: menu.length,

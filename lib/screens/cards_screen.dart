@@ -9,14 +9,11 @@ class CardsScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const Text('Cards'),
-        backgroundColor: Colors.red,
-        foregroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Card(
-              color: Colors.lime,
               elevation: 5,
               margin: const EdgeInsets.all(10),
               child: const Padding(

@@ -9,8 +9,6 @@ class ColumnRowsScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text('Colum & rows'),
-        backgroundColor: Colors.deepPurple,
-        foregroundColor: Colors.white,
       ),
     );
   }

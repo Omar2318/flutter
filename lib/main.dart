@@ -3,6 +3,7 @@ import 'package:flutter_widgets/screens/buttons_screen.dart';
 import 'package:flutter_widgets/screens/cards_screen.dart';
 import 'package:flutter_widgets/screens/colum_rows_screen.dart';
 import 'package:flutter_widgets/screens/home_screen.dart';
+import 'package:flutter_widgets/theme/app_theme.dart';
 
 void main() {
   runApp(const MainApp());
@@ -15,6 +16,8 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: 'Flutter Widgets · Umbreon',
+      theme: AppTheme.umbreon,
       initialRoute: '/',
       routes: {
         '/': (context) => HomeScreen(),

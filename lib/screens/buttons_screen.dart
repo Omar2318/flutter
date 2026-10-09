@@ -12,12 +12,7 @@ class ButtonsScreen extends StatelessWidget {
         },
         child: Icon(Icons.ac_unit_outlined),
       ),
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text('Buttons'),
-        backgroundColor: Colors.amber,
-        foregroundColor: Colors.white,
-      ),
+      appBar: AppBar(centerTitle: true, title: Text('Buttons')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -25,11 +20,7 @@ class ButtonsScreen extends StatelessWidget {
             TextButton(onPressed: () => {}, child: Text('Button Text')),
             //TextButton(onPressed: () => {}, child: Text('Button Text')),
             SizedBox(height: 10),
-            FilledButton(
-              onPressed: () => {},
-              child: Text('Boton con relleno'),
-              style: FilledButton.styleFrom(backgroundColor: Colors.blue),
-            ),
+            FilledButton(onPressed: () => {}, child: Text('Boton con relleno')),
             OutlinedButton(
               onPressed: () => {},
               child: Text('Outline Button'),
@@ -58,11 +49,17 @@ class ButtonsScreen extends StatelessWidget {
             ),
             Container(
               decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [Colors.blue, Colors.purple]),
+                gradient: LinearGradient(
+                  colors: [
+                    Theme.of(context).colorScheme.primary,
+                    Theme.of(context).colorScheme.secondary,
+                  ],
+                ),
               ),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.transparent,
+                  foregroundColor: Theme.of(context).colorScheme.onPrimary,
                   shadowColor: Colors.transparent,
                 ),
                 onPressed: () => {},
